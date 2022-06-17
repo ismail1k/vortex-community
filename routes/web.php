@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::domain('cloud.vortex-community.ga')->group(function(){
+    Route::get('storage/{filename}', [\App\Http\Controllers\CloudController::class, 'index'])->name('storage');
+});
