@@ -20,3 +20,10 @@ Route::get('/', function () {
 Route::domain('cloud.vortex-community.ga')->group(function(){
     Route::get('storage/{filename}', [\App\Http\Controllers\CloudController::class, 'index'])->name('storage');
 });
+
+// Route::domain('staff.vortex-community.ga')->group(function(){
+    Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+// });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
