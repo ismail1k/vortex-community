@@ -17,10 +17,18 @@ class PlayerController extends Controller
         return view('players', compact('players'));
     }
 
-    public function update($id){
+    public function update(Request $request, $id){
         $player = Player::where('uid', $id)->first();
         if(!$player){
             return abort(404);
+        }
+        if($request->isMethod('post')){
+            Player::where('uid', $id)->update([
+                'username' => $request['username'],
+                'locked' => $request['locked']?true:false,
+                'discordid' => $request['discordid'],
+            ]);
+            return redirect()->back()->with(['response' => 'User updated!']);
         }
         return view('player-update', compact('player'));
     }

@@ -25,9 +25,9 @@
         <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
-                    <a class="navbar-brand" href="dashboard.html">
+                    <a class="navbar-brand" href="{{route('dashboard')}}">
                         <b class="logo-icon">
-                            <img src="/plugins/images/logo-icon.png" alt="homepage" />
+                            <img style="width:50px;" src="/favicon.png" alt="homepage" />
                         </b>
                         <span class="logo-text">
                             <img src="/plugins/images/logo-text.png" alt="homepage" />

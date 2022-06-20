@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="white-box">
-                <h3 class="box-title">25 Player Online</h3>
+                <h3 class="box-title">N/A Player Online</h3>
                 <table class="table">
                     <tr>
                         <th>#</th>

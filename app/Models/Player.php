@@ -9,9 +9,9 @@ class Player extends Model
 {
     use HasFactory;
     protected $connection = 'samp';
-
     protected $table = 'users';
-
+    public $timestamps = false;
+    
     protected $fillable = [
         'name',
         'username',

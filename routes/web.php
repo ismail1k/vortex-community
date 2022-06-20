@@ -12,7 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes([
+    'login' => true,
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
+]);
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,5 +30,6 @@ Route::domain('cloud.vortex-community.ga')->group(function(){
 Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('players', [\App\Http\Controllers\PlayerController::class, 'index'])->name('players');
 Route::get('players/{id}', [\App\Http\Controllers\PlayerController::class, 'update'])->name('players.update');
+Route::post('players/{id}', [\App\Http\Controllers\PlayerController::class, 'update'])->name('players.update');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
