@@ -40,14 +40,14 @@
         <div class="bg-img"></div>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-end mx-4">
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm  underline">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm underline">Log in</a>
+                        <a href="{{ route('login') }}" class="text-sm underline mx-3">Log in</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm underline mx-3">Register</a>
+                            <a href="{{ route('register') }}" class="ml-4 text-sm underline">Register</a>
                         @endif
                     @endauth
                 </div>
