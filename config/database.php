@@ -43,6 +43,17 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+        'samp' => array(
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'vortex',
+            'username'  => 'vortex',
+            'password'  => 'password',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ),
+
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),

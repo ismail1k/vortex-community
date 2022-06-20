@@ -185,7 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Adams\Rcon\RconServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -207,7 +207,7 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
+    'Rcon' => Adams\Rcon\Facades\Facade::class,
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
