@@ -20,12 +20,12 @@
                     </tr>
                     @foreach($players as $player)
                         <tr>
-                            <td>{{$player->uid}}</td>
-                            <td>N/A</td>
+                            <td>{{$player->id}}</td>
+                            <td>{{$player->status}}</td>
                             <td>{{$player->username}}</td>
-                            <td>{{$player->username}}</td>
+                            <td>{{$player->discrod->name}}</td>
                             <td>
-                                <a type="button" class="btn btn-info" href="{{ route('players.update', $player->uid) }}">Update</a>
+                                <a type="button" class="btn btn-info" href="{{ route('players.update', $player->id) }}">Update</a>
                             </td>
                         </tr>
                     @endforeach
