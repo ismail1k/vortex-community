@@ -37,7 +37,7 @@
                             <label for="username">Status: </label>
                         </div>
                         <div class="col-8">
-                            <select class="form-select" name="banned">
+                            <select class="form-select" name="banned" {{Auth::user()->ban?'':'disabled'}}>
                                 <option value="0" {{$player->banned?'':'selected'}}>Active</option>
                                 <option value="1" {{$player->banned?'selected':''}}>Banned</option>
                             </select>
@@ -48,7 +48,7 @@
                             <label for="username">Whitelist: </label>
                         </div>
                         <div class="col-8">
-                            <select class="form-select" name="locked">
+                            <select class="form-select" name="locked" {{Auth::user()->whitelist?'':'disabled'}}>
                                 <option value="0" {{$player->locked?'':'selected'}}>Whitelisted</option>
                                 <option value="1" {{$player->locked?'selected':''}}>Unwhitelisted</option>
                             </select>
