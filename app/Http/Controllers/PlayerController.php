@@ -71,7 +71,7 @@ class PlayerController extends Controller
             if(Auth::user()->ban){
                 if($request->banned){
                     $banned = DB::connection('samp')->table('bans')->where('username', $response->username)->first();
-                    if($banned){
+                    if(!$banned){
                         DB::connection('samp')->table('bans')->insert([
                             'username' => $request->username,
                             'ip' => '',
