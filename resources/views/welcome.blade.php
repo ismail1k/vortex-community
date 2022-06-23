@@ -57,8 +57,8 @@
                 <a style="color: #f9611d;font-size:3em;"><b>Vortex Community</b></a>
                 <div style="color: #f9611d;" class="d-flex justify-content-between">
                     <a href="https://discord.gg/9ygtuYzf3f">Discord</a>
-                    <a href="javascript:void(0);">Demand Passport</a>
-                    <a href="javascript:void(0);">Rules</a>
+                    <a href="{{ route('demandpassport') }}">Demand Passport</a>
+                    <a href="{{ route('rules') }}">Rules</a>
                 </div>
             </div>
         </div>

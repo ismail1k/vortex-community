@@ -13,17 +13,17 @@
                 <table class="table">
                     <tr>
                         <th>#</th>
-                        <th>Status</th>
                         <th>Name RP</th>
-                        <th width="250px">Discord Name</th>
+                        <th>Whitelisted</th>
+                        <th width="250px">Discord</th>
                         <th width="100px">Action</th>
                     </tr>
                     @foreach($players as $player)
                         <tr>
                             <td>{{$player->id}}</td>
-                            <td>{{$player->status}}</td>
                             <td>{{$player->username}}</td>
-                            <td>{{$player->discrod->name}}</td>
+                            <td>{{$player->locked?'No':'Yes'}}</td>
+                            <td>{{$player->discord->name??'None'}}</td>
                             <td>
                                 <a type="button" class="btn btn-info" href="{{ route('players.update', $player->id) }}">Update</a>
                             </td>

@@ -10,7 +10,10 @@
     <link href="/css/app.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
     <link href="/css/style.min.css" rel="stylesheet">
-    
+    @yield('css')
+
+    <script src="/js/app.js"></script>
+    @yield('js')
 </head>
 
 <body>
@@ -92,7 +95,6 @@
             </footer>
         </div>
     </div>
-    <script src="/js/app.js"></script>
     <script src="/plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/js/app-style-switcher.js"></script>
     <script src="/js/waves.js"></script>
