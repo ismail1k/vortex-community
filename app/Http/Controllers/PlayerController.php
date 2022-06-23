@@ -70,14 +70,17 @@ class PlayerController extends Controller
             }
             if(Auth::user()->ban){
                 if($request->banned){
-                    DB::connection('samp')->table('bans')->insert([
-                        'username' => $request->username,
-                        'ip' => '',
-                        'bannedby' => Auth::user()->name,
-                        'date' => Carbon::now(),
-                        'reason' => null,
-                        'permanent' => 0,
-                    ]);
+                    $banned = DB::connection('samp')->table('bans')->where('username', $response->username)->first();
+                    if(count($banned)){
+                        DB::connection('samp')->table('bans')->insert([
+                            'username' => $request->username,
+                            'ip' => '',
+                            'bannedby' => Auth::user()->name,
+                            'date' => Carbon::now(),
+                            'reason' => null,
+                            'permanent' => 0,
+                        ]);
+                    }
                 }
                 if(!$request->banned){
                     DB::connection('samp')->table('bans')->where('username', $request->username)->delete();
