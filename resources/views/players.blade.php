@@ -9,7 +9,17 @@
     <div class="row">
         <div class="col-md-12">
             <div class="white-box">
-                <h3 class="box-title">N/A Player Online</h3>
+                <div class="d-flex justify-content-between">
+                    <h3 class="box-title">Players</h3>
+                    <form action="" method="get" id="search">
+                        <div class="input-group" style="max-width:350px;">
+                            <input type="text" name="q" class="form-control" placeholder="Search" aria-label="Search" value="{{$query??''}}">
+                            <span role="button" onclick="document.getElementById('search').submit()" class="input-group-text" style="height:35px;">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </form>
+                </div>
                 <table class="table">
                     <tr>
                         <th>#</th>

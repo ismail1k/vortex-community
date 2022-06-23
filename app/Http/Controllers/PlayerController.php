@@ -23,8 +23,16 @@ class PlayerController extends Controller
         return $response->object();
     }
 
-    public function index(){
-        $response = Player::all();
+    public function index(Request $request){
+        if(isset($request->q)){
+            $response = Player::query()
+            ->where('username', 'LIKE', "%{$request->q}%")
+            ->orWhere('discordname', 'LIKE', "%{$request->q}%")
+            ->orWhere('discordid', 'LIKE', "%{$request->q}%")
+            ->get();
+        } else {
+            $response = Player::all();
+        }
         $guild_id = env('DISCORD_GUILD_ID');
         $players = [];
         foreach($response as $player){
@@ -38,7 +46,10 @@ class PlayerController extends Controller
                 ],
             ]);
         }
-        return view('players', compact('players'));
+        return view('players', [
+            'players' => $players,
+            'query' => $request->q??'',
+        ]);
     }
 
     public function update(Request $request, $id){
