@@ -34,6 +34,15 @@
             a:hover{
                 color: white;
             }
+            .div{
+                position:absolute;
+                top:40%;
+                left:calc(27% - 175px);
+            }
+            .title{
+                color: #f9611d;
+                font-size:3em;
+            }
         </style>
     </head>
     <body>
@@ -53,8 +62,8 @@
                 </div>
             @endif
 
-            <div style="position:absolute; top:40%; left:calc(50% - 175px);">
-                <a style="color: #f9611d;font-size:3em;"><b>Vortex Community</b></a>
+            <div class="div">
+                <a class="title"><b>Vortex Community</b></a>
                 <div style="color: #f9611d;" class="d-flex justify-content-between">
                     <a href="https://discord.gg/9ygtuYzf3f">Discord</a>
                     <a href="{{ route('demandpassport') }}">Demand Passport</a>
