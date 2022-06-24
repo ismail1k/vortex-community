@@ -42,7 +42,7 @@
             @if (Route::has('login'))
                 <div class="d-flex justify-content-end mx-4">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm  underline">Home</a>
+                        <a href="{{ url('/dashboard') }}" class="text-sm  underline">Home</a>
                     @else
                         <a href="{{ route('login') }}" class="text-sm underline mx-3">Log in</a>
 
