@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Player;
+use App\Models\Logger;
 use Carbon\Carbon;
 use Http;
 use Auth;
@@ -90,6 +91,10 @@ class PlayerController extends Controller
                 'username' => $request['username'],
                 'discordid' => $request['discordid'],
                 'discordname' => $member->user->username??null,
+            ]);
+            Logger::create([
+                'actionby' => Auth::user()->name,
+                'description' => "User ".Auth::user()->name." update stats for playerid $id, set username to ".$request['username']." and Whitelist to ".$request['locked']." and Ban to ".$request->banned,
             ]);
             return redirect()->back()->with(['response' => 'User updated!']);
         }
