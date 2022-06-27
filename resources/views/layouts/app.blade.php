@@ -10,6 +10,11 @@
     <link href="/css/app.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
     <link href="/css/style.min.css" rel="stylesheet">
+    <style>
+        .logo-text>img{
+            width:100%;
+        }
+    </style>
     @yield('css')
 
     <script src="/js/app.js"></script>
@@ -29,11 +34,8 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
                     <a class="navbar-brand" href="{{route('dashboard')}}">
-                        <b class="logo-icon">
-                            <img style="width:50px;" src="/favicon.png" alt="homepage" />
-                        </b>
-                        <span class="logo-text">
-                            <img src="/plugins/images/logo-text.png" alt="homepage" />
+                        <span class="logo-text mx-3">
+                            <img src="/image/vortex-header.png" alt="homepage" />
                         </span>
                     </a>
                     <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"

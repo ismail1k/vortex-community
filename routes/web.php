@@ -32,7 +32,7 @@ Route::get('players', [\App\Http\Controllers\PlayerController::class, 'index'])-
 Route::get('players/{id}', [\App\Http\Controllers\PlayerController::class, 'update'])->name('players.update');
 Route::post('players/{id}', [\App\Http\Controllers\PlayerController::class, 'update'])->name('players.update');
 
-Route::get('games', [\App\Http\Controllers\GamesController::class, 'index'])->name('games');
+Route::get('games', [\App\Http\Controllers\GameController::class, 'index'])->name('games');
 
 
 Route::get('/demandpassport', [App\Http\Controllers\BlogController::class, 'demandpassport'])->name('demandpassport');
