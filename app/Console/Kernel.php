@@ -16,6 +16,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->call(function(){
+            exec("kill -9 $(ps ax | grep samp03svr | fgrep -v grep | awk '{ print $1 }')");
+            exec('cd /root/samp && nohup ./samp03svr &');
+        })->timezone('Africa/Casablanca')->dailyAt('05:00');
     }
 
     /**
