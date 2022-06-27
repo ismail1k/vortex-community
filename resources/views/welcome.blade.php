@@ -100,7 +100,7 @@
                 </div>
             @endif
         </div>
-        <div class="container row d-md-flex justify-content-center align-items-center vortex-content">
+        <div class="row d-md-flex justify-content-center align-items-center vortex-content">
             <div class="col-md-6 d-flex justify-content-center justify-content-start align-items-center vortex-content-part1">
                 <img src="/image/vortex.png" class="part2-vortexlogo">
             </div>
@@ -110,9 +110,9 @@
                     <div class="part1-title">VORTEX <br> COMMUNITY</div>
                     <div class="part1-actions">
                         <div class="d-flex justify-content-between">
-                            <a class="d-flex justify-content-start">Discord</a>
-                            <a class="d-flex justify-content-center">Demand&nbsp;Passport</a>
-                            <a class="d-flex justify-content-center">Rules</a>
+                            <a class="d-flex justify-content-start" href="https://discord.gg/9ygtuYzf3f">Discord</a>
+                            <a class="d-flex justify-content-center" href="{{route('demandpassport')}}">Demand&nbsp;Passport</a>
+                            <a class="d-flex justify-content-center" href="{{route('rules')}}">Rules</a>
                         </div>
                     </div>
                 </span>
