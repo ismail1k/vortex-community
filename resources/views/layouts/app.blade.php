@@ -75,6 +75,13 @@
                                 <span class="hide-menu">Players</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('games') }}"
+                                aria-expanded="false">
+                                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                                <span class="hide-menu">Games</span>
+                            </a>
+                        </li>
                     </ul>
 
                 </nav>

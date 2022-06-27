@@ -43,9 +43,11 @@
                 padding-right: 15px;
                 padding-top: 5px;
                 padding-bottom: 5px;
+                transition: 200ms;
             }
             .vortex-header-text > *:hover{
-                color: #ffffff;
+                color: #f9611d;
+                border: 1px solid #f9611d;
             }
             .vortex-content{
                 height: calc(100vh - 100px);
@@ -73,6 +75,7 @@
                 transition: 200ms;
                 padding-left: 15px;
                 padding-right: 15px;
+                border: 1px solid #ffffff;
             }
             .part1-actions>div>*:hover{
                 color: #f9611d;
