@@ -16,7 +16,7 @@
                 width:100%;
                 height:100%;
                 position: absolute;
-                background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/image/vortex-background.jpg");
+                background-image: url("/image/vortex-background.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -24,27 +24,74 @@
                 z-index: -1;
             }
             body {
-                font-family: 'Nunito', sans-serif;
+                color: #ffffff;
+                font-family: 'arial';
                 
             }
-            a {
-                color: #f9611d;
+            .home {
+                color: #ffffff;
                 font-size:18px;
             }
-            a:hover{
-                color: white;
+            .vortex-header-img > img {
+                width: 180px;
+            }
+            .vortex-header-text > *{
+                color: #ffffff;
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            .vortex-header-text > *:hover{
+                color: #ffffff;
+            }
+            .vortex-content{
+                height: calc(100vh - 100px);
+            }
+            .part1-welcome{
+                font-size: 25px;
+            }
+            .part1-title{
+                font-size: 75px;
+                font-weight: bold;
+                line-height: 1;
+            }
+            .part2-vortexlogo{
+                position: relative;
+                max-width: 300px;
+            }
+            .part1-actions{
+                height: 60px;
+            }
+            .part1-actions>div>*{
+                color: #ffffff;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 3px;
+                transition: 200ms;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .part1-actions>div>*:hover{
+                color: #f9611d;
+                border: 1px solid #f9611d;
             }
         </style>
     </head>
     <body>
         <div class="bg-img"></div>
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="container home d-flex justify-content-between align-items-center">
+            <div class="vortex-header-img my-3">
+                <img src="/image/vortex-header.png" alt="">
+            </div>
             @if (Route::has('login'))
-                <div class="d-flex justify-content-end mx-4">
+                <div class="vortex-header-text d-flex justify-content-end">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm  underline">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm underline mx-3">Log in</a>
+                        <a href="{{ route('login') }}" class="text-sm underline mx-3">Sign in</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm underline">Register</a>
@@ -52,14 +99,23 @@
                     @endauth
                 </div>
             @endif
-
-            <div style="position:absolute; top:40%; left:calc(50% - 175px);">
-                <a style="color: #f9611d;font-size:3em;"><b>Vortex Community</b></a>
-                <div style="color: #f9611d;" class="d-flex justify-content-between">
-                    <a href="https://discord.gg/9ygtuYzf3f">Discord</a>
-                    <a href="{{ route('demandpassport') }}">Demand Passport</a>
-                    <a href="{{ route('rules') }}">Rules</a>
-                </div>
+        </div>
+        <div class="container row d-md-flex justify-content-center align-items-center vortex-content">
+            <div class="col-md-6 d-flex justify-content-center justify-content-start align-items-center vortex-content-part1">
+                <img src="/image/vortex.png" class="part2-vortexlogo">
+            </div>
+            <div class="col-md-6 d-flex justify-content-center justify-content-start align-items-center vortex-content-part2">
+                <span>
+                    <div class="part1-welcome">WELCOME TO</div>
+                    <div class="part1-title">VORTEX <br> COMMUNITY</div>
+                    <div class="part1-actions">
+                        <div class="d-flex justify-content-between">
+                            <a class="d-flex justify-content-start">Discord</a>
+                            <a class="d-flex justify-content-center">Demand&nbsp;Passport</a>
+                            <a class="d-flex justify-content-center">Rules</a>
+                        </div>
+                    </div>
+                </span>
             </div>
         </div>
     </body>
