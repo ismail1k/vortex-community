@@ -20,10 +20,13 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Artisan::command('samp:restart', function(){
-    $process = new Process(['kill', '-9', "$(ps ax | grep samp03svr | fgrep -v grep | awk '{ print $1 }')"]);
-    $process->run();
-    $process = new Process(['cd', '/root/samp', '&&', 'nohup', './samp03svr', '&']);
-    $process->run();
+    
+    exec("kill -9 $(ps ax | grep samp03svr | fgrep -v grep | awk '{ print $1 }')");
+    exec('cd /root/samp && nohup ./samp03svr &');
+    // $process = new Process(['kill', '-9', "$(ps ax | grep samp03svr | fgrep -v grep | awk '{ print $1 }')"]);
+    // $process->run();
+    // $process = new Process(['cd', '/root/samp', '&&', 'nohup', './samp03svr', '&']);
+    // $process->run();
     
     $this->info("Server Restarted!");
 });
