@@ -21,8 +21,7 @@ Artisan::command('inspire', function () {
 
 Artisan::command('samp:restart', function(){
     
-    exec("kill -9 $(ps ax | grep samp03svr | fgrep -v grep | awk '{ print $1 }')");
-    exec('cd /root/samp && nohup ./samp03svr &');
+    exec("kill -9 $(ps ax | grep samp03svr | fgrep -v grep | awk '{ print $1 }') && cd /home/server/samp && nohup ./samp03svr &");
     // $process = new Process(['kill', '-9', "$(ps ax | grep samp03svr | fgrep -v grep | awk '{ print $1 }')"]);
     // $process->run();
     // $process = new Process(['cd', '/root/samp', '&&', 'nohup', './samp03svr', '&']);
