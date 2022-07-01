@@ -81,6 +81,9 @@
                 color: #f9611d;
                 border: 1px solid #f9611d;
             }
+            .vortex-content-part2{
+                max-width: 90vw;
+            }
         </style>
     </head>
     <body>
