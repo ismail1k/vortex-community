@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/csrf', function(){
+    return response()->json(['token' => csrf_token()]);
+});
 Route::post('/event/discord', [\App\Http\Controllers\EventController::class, 'discord']);
