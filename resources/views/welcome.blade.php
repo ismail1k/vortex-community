@@ -73,6 +73,8 @@
                 font-size: 18px;
                 border-radius: 3px;
                 transition: 200ms;
+                margin-left: 15px;
+                margin-right: 15px;
                 padding-left: 15px;
                 padding-right: 15px;
                 border: 1px solid #ffffff;
@@ -80,9 +82,6 @@
             .part1-actions>div>*:hover{
                 color: #f9611d;
                 border: 1px solid #f9611d;
-            }
-            .vortex-content-part2{
-                max-width: 90vw;
             }
         </style>
     </head>
