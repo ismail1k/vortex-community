@@ -19,7 +19,6 @@ class EventController extends Controller
             ]);
             return response()->json(['status' => 200]);
         }
-        return response()->json(['status' => 404]);
 
         if($request->action == 'join'){
             Player::where('discordid', $request->discordid)->update([
