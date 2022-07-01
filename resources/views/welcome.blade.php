@@ -30,7 +30,7 @@
             }
             .home {
                 color: #ffffff;
-                font-size:18px;
+                font-size:15px;
             }
             .vortex-header-img > img {
                 width: 180px;
