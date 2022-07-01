@@ -20,5 +20,17 @@ class EventController extends Controller
             return response()->json(['status' => 200]);
         }
         return response()->json(['status' => 404]);
+
+        if($request->action == 'join'){
+            Player::where('discordid', $request->discordid)->update([
+                'locked' => 0,
+            ]);
+            Logger::create([
+                'actionby' => 'BOT: discord-api Event',
+                'description' => 'Whitelist player. for reason: Member Join server.',
+            ]);
+            return response()->json(['status' => 200]);
+        }
+        return response()->json(['status' => 404]);
     }
 }
