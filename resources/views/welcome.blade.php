@@ -30,7 +30,7 @@
             }
             .home {
                 color: #ffffff;
-                font-size:18px;
+                font-size:15px;
             }
             .vortex-header-img > img {
                 width: 180px;
@@ -53,10 +53,10 @@
                 height: calc(100vh - 100px);
             }
             .part1-welcome{
-                font-size: 25px;
+                font-size: 20px;
             }
             .part1-title{
-                font-size: 75px;
+                font-size: 63px;
                 font-weight: bold;
                 line-height: 1;
             }
@@ -73,6 +73,8 @@
                 font-size: 18px;
                 border-radius: 3px;
                 transition: 200ms;
+                margin-left: 15px;
+                margin-right: 15px;
                 padding-left: 15px;
                 padding-right: 15px;
                 border: 1px solid #ffffff;
@@ -109,8 +111,8 @@
             </div>
             <div class="col-md-6 d-flex justify-content-center justify-content-start align-items-center vortex-content-part2">
                 <span>
-                    <div class="part1-welcome">WELCOME TO</div>
-                    <div class="part1-title">VORTEX <br> COMMUNITY</div>
+                    <div class="part1-welcome mx-2">WELCOME TO</div>
+                    <div class="part1-title mx-2">VORTEX <br> COMMUNITY</div>
                     <div class="part1-actions">
                         <div class="d-flex justify-content-between">
                             <a class="d-flex justify-content-start" href="https://discord.gg/9ygtuYzf3f">Discord</a>
